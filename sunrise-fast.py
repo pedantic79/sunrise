@@ -9,8 +9,13 @@ from lifxlan import LifxLAN, RED, ORANGE, YELLOW
 def main():
     lifx = LifxLAN(1)
     devices = lifx.get_lights()
-    bulb = devices[0]
+    count = 0
+    while len(devices) == 0 and count < 10:
+        sleep(2)
+        devices = lifx.get_lights()
+        count += 1
 
+    bulb = devices[0]
     bulb.set_power("on")
     bulb.set_color(RED, 10, True)
     sunrise(bulb, 30, 100)
