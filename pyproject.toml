@@ -5,11 +5,11 @@ description = ""
 authors = ["Dan Nguyen <pedantic@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.10"
 lifxlan = "^1.2.7"
 
 [tool.poetry.dev-dependencies]
-black = "^21.12b0"
+black = "^24"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
